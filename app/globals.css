@@ -1,0 +1,74 @@
+/* ───────── Google Fonts: 키치 한글 조합 ───────── */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hahmlet:wght@400;600;800&family=Gaegu:wght@400;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    height: 100%;
+    background: #0A0A0A;
+    color: #FAFAF5;
+  }
+  body {
+    font-family: 'Pretendard', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* 키치한 체크무늬 노이즈 배경 */
+    background-image:
+      radial-gradient(circle at 25% 15%, rgba(246,255,0,0.04), transparent 40%),
+      radial-gradient(circle at 80% 85%, rgba(255,45,135,0.05), transparent 50%);
+    background-attachment: fixed;
+  }
+  input, select, textarea, button {
+    font-size: 16px;
+    font-family: inherit;
+  }
+  ::selection {
+    background: #F6FF00;
+    color: #0A0A0A;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-[420px] px-5;
+  }
+
+  /* 키치 헤드라인: 두꺼운 세리프 + 큰 레터스페이싱 */
+  .kitsch-title {
+    @apply font-display text-ink uppercase tracking-tight;
+    font-stretch: 110%;
+  }
+
+  .kitsch-serif {
+    @apply font-serif text-ink;
+  }
+
+  .kitsch-hand {
+    @apply font-hand text-acid;
+  }
+
+  /* 브루탈리스트 카드 */
+  .kitsch-card {
+    @apply border-2 border-ink bg-muted p-5;
+    box-shadow: 6px 6px 0 0 #FAFAF5;
+  }
+
+  /* 기울어진 스티커 라벨 */
+  .kitsch-stamp {
+    @apply inline-block border-2 border-ink px-2 py-0.5 font-display text-xs uppercase;
+    transform: rotate(-3deg);
+  }
+
+  /* 가로 티켓컷 디바이더 */
+  .kitsch-divider {
+    background-image: linear-gradient(to right, #FAFAF5 50%, transparent 50%);
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+    background-position: center;
+    height: 2px;
+  }
+}
