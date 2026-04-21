@@ -42,9 +42,9 @@ export default function LandingPage() {
             ⚠️ 경고
           </span>
           <p className="font-display text-sm uppercase leading-relaxed text-ink">
-            이건 알림 앱이 아님.
+            이건 알림 서비스 아님.
             <br />
-            <span className="text-acid">행동 강제 앱</span> 이다.
+            <span className="text-acid">행동 강제 서비스</span> 다!
           </p>
           <p className="mt-3 font-serif text-xs text-dim">
             졸림 오기 10분 전 찌르고 → 60초 루틴 → 반복 <br />
